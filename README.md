@@ -4,7 +4,7 @@ MDM3 coursework - audio sentiment analysis.
 
 |Our project links | 
 | ------------- | 
-| [example](https://www.youtube.com/watch?v=dQw4w9WgXcQ)  | 
+| [DOCS](https://docs.google.com/document/d/1jlyTTrEH5BasciDhwl_I6wi79kQLPnXXD0kC3Crd54s/edit?usp=sharing)  | 
 
 
 |Next steps |Who wants to do | Done yet |Checked/proofread|
