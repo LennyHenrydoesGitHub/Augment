@@ -23,7 +23,7 @@ def main():
 
     # StereoSGBM parameter setup
     min_disparity = 55
-    num_disparities = 320
+    num_disparities = 170 #142
     block_size = 5
     stereo = cv2.StereoSGBM_create(
         minDisparity=min_disparity,
@@ -32,17 +32,17 @@ def main():
     )
 
     # Compute disparity
-    disparity = stereo.compute(gray_left, gray_right).astype(np.float32) / 16.0
+    disparity = stereo.compute(gray_left, gray_right).astype(np.float32) / 16
 
     # Set focal length (in pixels) and baseline (in meters)
-    focal_length = 748.4
+    focal_length = 1733.74
     baseline = 0.53662 #0.1  in m # 10 cm
 
     # Calculate depth map (distance to objects)
     depth_map = calculate_distance(disparity, focal_length, baseline)
 
     # Display disparity and depth map
-    cv2.imshow('Disparity', disparity / num_disparities)
+    cv2.imshow(disparity / num_disparities)
     cv2.imshow('Depth Map', depth_map / 100)  # Convert to meters for better visualization
     cv2.waitKey(0)
     cv2.destroyAllWindows()
